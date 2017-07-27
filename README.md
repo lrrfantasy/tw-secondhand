@@ -1,6 +1,6 @@
 # Online API
 
-[http://secondhand.leanapp.cn/](https://sketch.cloud/s/8yxD3)
+[http://secondhand.leanapp.cn/](http://secondhand.leanapp.cn/)
 
 # Design Mockup
 
