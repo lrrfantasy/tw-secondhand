@@ -1,12 +1,14 @@
 import * as React from 'react';
 import './Logo.css';
 
-const logo = require('./logo.svg');
+const logo = require('./logo.png');
 
 interface LogoProps {
    logo?: string;
 }
 
 export default (props: LogoProps) => (
-    <img src={props.logo || logo} className="App-logo" alt="logo" />
+    <div className="App-logo-div">
+        <img src={props.logo || logo} className="App-logo" alt="logo" />
+    </div>
 );
