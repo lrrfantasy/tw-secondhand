@@ -11,7 +11,6 @@ const type = (props: InputFieldProps) => {
 
 export default (props: InputFieldProps) => (
     <p>
-        <input className="w3-input"
-        type={type(props)} placeholder={props.placeholder}/>
+        <input className="w3-input" type={type(props)} placeholder={props.placeholder}/>
     </p>
 );
