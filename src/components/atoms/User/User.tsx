@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './User.css';
 
-const icon = require('../../../components/Logo/logo.png');
+const icon = require('../../../assets/logo.png');
 
 const User = (props) => (
   <div className="user">
