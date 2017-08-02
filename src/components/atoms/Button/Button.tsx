@@ -1,17 +1,13 @@
 import * as React from 'react';
+import './Button.css';
 
 interface Props {
-  classes: string;
   onClick: () => void;
-  children: React.ReactChild;
+  name: string;
 }
 
-class Button extends React.Component<Props> {
-  render() {
-    return (
-      <a className={this.props.classes} onClick={this.props.onClick}>{this.props.children}</a>
-    );
-  }
-}
+const Button = (props: Props) => (
+  <a className='button' onClick={props.onClick}>{props.name}</a>
+);
 
 export default Button;

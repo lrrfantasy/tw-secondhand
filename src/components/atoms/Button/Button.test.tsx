@@ -4,28 +4,32 @@ import { shallow } from 'enzyme';
 import Button from './Button';
 
 const spyOnClick = sinon.spy();
-const setup = () => {
+
+const setup = (name = 'hello') => {
   const props = {
-    classes: 'class',
     onClick: spyOnClick,
-    children: <p>hello</p>,
-  }
+    name,
+  };
   return shallow(<Button {...props} />);
 };
 
-it('should render the button with right class name', () => {
+it('should render the button with button class', () => {
   const wrapper = setup();
-  expect(wrapper.find('a.class').exists()).toBeTruthy();
+  expect(wrapper.find('a.button').exists()).toBeTruthy();
+});
+
+it('should render button with right name', () => {
+  const wrapper = setup('button');
+  expect(wrapper.text()).toBe('button');
 });
 
 it('should call onClick prop method when being clicked', () => {
   const wrapper = setup();
-  wrapper.find('a.class').simulate('click');
+  wrapper.find('a.button').simulate('click');
   sinon.assert.calledOnce(spyOnClick);
 });
 
-it('should render button with prop children', () => {
-  const wrapper = setup();
-  expect(wrapper.containsMatchingElement(<p>hello</p>)).toBeTruthy();
-});
+
+
+
 
