@@ -11,33 +11,13 @@ it('should render three buttons', () => {
   expect(wrapper.find('Button').length).toBe(3);
 });
 
-it('should set right state when first rendered', () => {
+it('should set 0 as the active index when first rendered', () => {
   const wrapper = setup();
-  expect(wrapper.state('homeActive')).toBe(true);
-  expect(wrapper.state('menuActive')).toBe(false);
-  expect(wrapper.state('userActive')).toBe(false);
+  expect(wrapper.state('activeIdx')).toBe(0);
 });
 
-it('should set right state when clicking home button', () => {
+it('should set the index of clicked button as active index', () => {
   const wrapper = setup();
-  wrapper.find('a.homeButton').simulate('click');
-  expect(wrapper.state('homeActive')).toBe(true);
-  expect(wrapper.state('menuActive')).toBe(false);
-  expect(wrapper.state('userActive')).toBe(false);
-});
-
-it('should set right state when clicking menu button', () => {
-  const wrapper = setup();
-  wrapper.find('a.menuButton').simulate('click');
-  expect(wrapper.state('homeActive')).toBe(false);
-  expect(wrapper.state('menuActive')).toBe(true);
-  expect(wrapper.state('userActive')).toBe(false);
-});
-
-it('should set right state when clicking user button', () => {
-  const wrapper = setup();
-  wrapper.find('a.userButton').simulate('click');
-  expect(wrapper.state('homeActive')).toBe(false);
-  expect(wrapper.state('menuActive')).toBe(false);
-  expect(wrapper.state('userActive')).toBe(true);
+  wrapper.find('a').at(0).simulate('click');
+  expect(wrapper.state('activeIdx')).toBe(0);
 });

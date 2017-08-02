@@ -2,17 +2,4 @@
   display: flex;
   justify-content:space-around;
   align-items: center;
-  background-color: gold;
-}
-
-.iconButton {
-  width: 200px;
-  text-align: center;
-  background-color: gold;
-}
-
-.iconButtonPressed {
-  width: 200px;
-  text-align: center;
-  background-color: white;
 }
