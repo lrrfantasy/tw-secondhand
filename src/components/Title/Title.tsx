@@ -13,7 +13,7 @@ const icon = (props: TitleProps) => {
 
 export default (props: TitleProps) => (
     <div className="title">
-        <button>
+        <button className="icon-button">
            <i className="material-icons">{icon(props)}</i>
          </button>
         {props.title}
