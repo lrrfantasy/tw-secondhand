@@ -22,7 +22,7 @@ class MenuBar extends React.Component<{}, States> {
         {
           [homeIcon, menuIcon, userIcon].map((icon, idx) => (
             <IconButton
-              active = {idx === this.state.activeIdx }
+              active = {idx === this.state.activeIdx}
               onClick = {() => {this.setState({activeIdx: idx}); }}
               key = {idx}
             >
