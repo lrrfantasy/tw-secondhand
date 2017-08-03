@@ -8,7 +8,12 @@ interface Props {
 }
 
 const Button = (props: Props) => (
-  <a className={`button ${props.disabled && 'disabled'}`} onClick={props.disabled ? () => {} : props.onClick}>{props.name}</a>
+  <a
+    className={`button ${props.disabled && 'disabled'}`}
+    {...props.disabled || {onClick: props.onClick}}
+  >
+    {props.name}
+  </a>
 );
 
 export default Button;

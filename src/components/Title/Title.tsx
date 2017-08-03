@@ -19,6 +19,6 @@ export default (props: TitleProps) => (
        </button>
       </div>
       <div className="title-div">{props.title}</div>
-      <div className="space-div"></div>
+      <div className="space-div" />
     </div>
 );

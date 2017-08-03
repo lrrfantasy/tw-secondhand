@@ -6,7 +6,7 @@ import InputField from '../../../components/InputField/InputField';
 import VerticalSpacing from '../../../components/atoms/VerticalSpacing/VerticalSpacing';
 import './LoginPage.css';
 
-class LoginPage extends React.Component<{}, any> {
+class LoginPage extends React.Component<{}, {}> {
   constructor() {
     super();
     this.onLogin = this.onLogin.bind(this);
@@ -31,9 +31,9 @@ class LoginPage extends React.Component<{}, any> {
           <Logo />
           <VerticalSpacing spacingHeightInEm={2} />
           <InputField placeholder="用户名"/>
-          <InputField placeholder="密码" isPasswordField/>
+          <InputField placeholder="密码" isPasswordField={true}/>
           <VerticalSpacing spacingHeightInEm={2} />
-          <div className="menu"><Button onClick={this.onLogin} name="登录" disabled/></div>
+          <div className="menu"><Button onClick={this.onLogin} name="登录" disabled={true}/></div>
           <div className="menu"><Button onClick={this.onRegister} name="免费注册" /></div>
         </Container>
       </div>
@@ -41,4 +41,4 @@ class LoginPage extends React.Component<{}, any> {
   }
 }
 
-export default LoginPage
+export default LoginPage;

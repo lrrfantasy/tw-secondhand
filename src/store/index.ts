@@ -10,6 +10,7 @@ import initialState from './initialState';
 import reducers from './reducers';
 import middlewares from './middlewares';
 import { USER_LOGIN_SUC } from '../modules/user/actions';
+import { GET_PRODUCTS_SUC } from '../modules/products/actions';
 
 const storeConfigure = (history: History) => {
     const reducer = storage.reducer(combineReducers(reducers));
@@ -23,12 +24,13 @@ const storeConfigure = (history: History) => {
     const storeMiddleware = storage.createMiddleware(engine, [], [
         // White list actions, will save everything if leave blank here
         USER_LOGIN_SUC,
+        GET_PRODUCTS_SUC,
     ]);
 
     const createStoreWithMiddleware = applyMiddleware(router, storeMiddleware, ...middlewares)(createStore);
-    
+
     const store = createStoreWithMiddleware(reducer, initialState);
-    
+
     const load = storage.createLoader(engine);
     // will trigger storage load action
     load(store);

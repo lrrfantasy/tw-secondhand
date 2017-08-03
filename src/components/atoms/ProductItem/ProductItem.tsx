@@ -11,7 +11,7 @@ interface Props {
   inactive?: boolean;
 }
 
-class ProductItem extends React.Component<Props, any> {
+class ProductItem extends React.Component<Props, {}> {
   render() {
     const img = require('../../../assets/logo.png');
     return (
