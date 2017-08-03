@@ -38,7 +38,7 @@ class ProfilePage extends React.Component<Props, {}> {
 
     return (
       <div>
-        <Container titleProps = {titleProps}>
+        <Container titleProps = {titleProps} showMenuBar>
           <div><User name={this.props.name} icon={logo}/></div>
           <VerticalSpacing spacingHeightInEm={3} />
           <div>
