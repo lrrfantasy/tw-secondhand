@@ -1,0 +1,32 @@
+.productItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.product-img {
+  width: 40%;
+}
+
+.img {
+  width: 100%;
+}
+
+.product-info {
+  width: 60%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.product-info span {
+  display: block;
+  padding: 1px;
+}
+.product-price {
+  color: darkorange;
+}
+
+.inactive {
+  background-color: rgba(204, 204, 204, 0.11);
+}
