@@ -18,9 +18,7 @@ interface Props {
 }
 const Container = (props: Props) => (
   <div className="container">
-    <div className="header">
-      <Title {...props.titleProps} />
-    </div>
+    <Title {...props.titleProps} />
     <div className="content">
       {props.children}
     </div>

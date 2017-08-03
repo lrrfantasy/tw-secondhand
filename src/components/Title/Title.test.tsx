@@ -5,7 +5,7 @@ import Title from './Title';
 const titleText = "title"
 it('Title shallow renders text for title', () => {
   const wrapper = shallow(<Title title={titleText}/>);
-  expect(wrapper.find('div').text()).toBe(titleText);
+  expect(wrapper.find('.title-div').text()).toBe(titleText);
 });
 
 it('Title shallow renders back icon when the props hasBackButton is true', () => {
