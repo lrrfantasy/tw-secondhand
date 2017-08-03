@@ -33,7 +33,7 @@ class LoginPage extends React.Component<{}, any> {
           <InputField placeholder="用户名"/>
           <InputField placeholder="密码" isPasswordField/>
           <VerticalSpacing spacingHeightInEm={2} />
-          <div className="menu"><Button onClick={this.onLogin} name="登录" /></div>
+          <div className="menu"><Button onClick={this.onLogin} name="登录" disabled/></div>
           <div className="menu"><Button onClick={this.onRegister} name="免费注册" /></div>
         </Container>
       </div>
