@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Title from '../../components/Title/Title';
+import VerticalSpacing from '../../components/atoms/VerticalSpacing/VerticalSpacing';
 import MenuBar from '../../components/molecules/MenuBar/MenuBar';
 
 import './Container.css';
@@ -11,6 +12,7 @@ interface TitleProps {
 }
 
 interface Props {
+  showMenuBar?: boolean;
   titleProps: TitleProps;
   children: React.ReactNode;
 }
@@ -20,7 +22,7 @@ const Container = (props: Props) => (
     <div className="content">
       {props.children}
     </div>
-    <MenuBar />
+    {props.showMenuBar ? <MenuBar /> : <VerticalSpacing spacingHeightInEm={1} />}
   </div>
 );
 

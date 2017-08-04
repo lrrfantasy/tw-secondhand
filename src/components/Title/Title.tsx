@@ -13,9 +13,12 @@ const icon = (props: TitleProps) => {
 
 export default (props: TitleProps) => (
     <div className="title">
+      <div className="icon-div">
         <button className="icon-button">
-           <i className="material-icons">{icon(props)}</i>
-         </button>
-        {props.title}
+         <i className="material-icons">{icon(props)}</i>
+       </button>
+      </div>
+      <div className="title-div">{props.title}</div>
+      <div className="space-div" />
     </div>
 );

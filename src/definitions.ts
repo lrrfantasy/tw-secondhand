@@ -24,6 +24,16 @@ export interface UserForLogin {
     password: string;
 }
 
+export interface Product {
+  description: string;
+  price: string;
+  img: string;
+  owner: {username: string, objectId: string};
+  name: string;
+  objectId: string;
+  createdAt: string;
+  updatedAt: string;
+}
 // ACTION CREATORS
 
 
@@ -34,12 +44,17 @@ export interface GeneralAction extends Redux.Action {
 export interface UserAction extends GeneralAction {
     payload?: UserForLogin,
 }
+export interface GetProductsAction extends GeneralAction {
+  payload?: Product[],
+}
 
 // STATES
 export type AppState = App;
 export type UserState = User;
+export type ProductsState = Product[];
 
 export interface RootState<S> {
+    products?: ProductsState,
     user?: UserState,
     app?: AppState,
     router?: ReactRouter.RouteComponentProps<S>,
