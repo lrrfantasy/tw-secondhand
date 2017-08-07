@@ -1,10 +1,15 @@
 import * as React from 'react';
 import {mount} from 'enzyme';
 import LoginPage from '../../../containers/pages/LoginPage/LoginPage';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import userReducer from '../../../modules/user/reducer'
 import Logo from '../../../components/Logo/Logo';
+import * as D from '../../../definitions';
 
 const setup = () => {
-  return mount(<LoginPage />);
+  const store = createStore<D.User>(userReducer, {name: ''})
+  return mount(<Provider store={store}><LoginPage dispatch={store.dispatch}/></Provider>);
 };
 
 it('should render Container component', () => {

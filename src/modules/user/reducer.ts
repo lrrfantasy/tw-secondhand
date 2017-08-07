@@ -9,10 +9,7 @@ const userReducer: Redux.Reducer<D.UserState> = (state: D.UserState, action: D.U
     state = state || initialState;
     switch (action.type) {
         case 'USER_LOGIN_SUC':
-            return {
-                ...state,
-                ...action.payload,
-            };
+            return {name: action.payload.username} || state;
         default:
     }
     return state;
